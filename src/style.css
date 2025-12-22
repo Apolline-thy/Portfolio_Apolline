@@ -18,7 +18,7 @@ body {
   color: var(--bg-color); /* light/cream text */
   padding: 2.5rem 3rem;
   box-sizing: border-box;
-  background-image: url(public/fond.svg);
+  background-image: url("../public/fond.svg");
 }
 
 .navbar {
