@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Apolline</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body>
+    <main class="header">
+      <img src="/public/etoile.svg" alt="etoile" class="etoile" />
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="/index.html">Portfolio</a>
+        </div>
+        <ul class="navbar__liste">
+          <li><a href="/index.html">Accueil</a></li>
+          <li><a href="/about.html">A Propos</a></li>
+          <li><a href="/projects.html">Mes Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <section class="hero">
+        <img src="/poisson.svg" alt="poisson" class="poisson" />
+        <img src="/fish.svg" alt="poisson" class="fish" />
+        <div class="hero__text">
+          <h2 class="hero__subtitle">Apolline</h2>
+          <h1 class="hero__title">PORTFOLIO</h1>
+        </div>
+        <div class="hero__buttons">
+          <button class="hero__button">Mes projets</button>
+          <button class="hero__button">A propos</button>
+        </div>
+      </section>
+      <img src="/etoile.svg" alt="etoile" class="etoile__bottom" />
+      <img src="/vague.svg" alt="vague" class="vague" />
+    </main>
+    <section class="propos">
+      <div class="propos__text">
+        <h2 class="propos__title">BONJOUR !</h2>
+        <p class="propos__desc">
+          Je m'appelle Apolline Thierry, étudiante en deuxième année de BUT
+          Métiers du Multimédia et de l'Internet à l'IUT de Limoges. Cette
+          formation combine plusieurs domaines et m'a permis d'acquérir des
+          compétences variées en web, design et audiovisuel. Sur cette page vous
+          trouverez plus de détails sur mes réalisations, mes compétences et mes
+          centres d'intérêt.
+        </p>
+      </div>
+      <img src="/couteau.svg" alt="couteau suisse" class="propos__couteau" />
+    </section>
+    <section class="projets">
+      <h2 class="projets__title">MES PROJETS</h2>
+      <div class="projets__img">
+        <img src="/google.png" alt="Projet 1" class="projets__google" />
+        <img src="/oeuvre.png" alt="Projet 1" class="projets__oeuvre" />
+        <img src="/olive.png" alt="Projet 1" class="projets__olive" />
+        <img src="/saé.png" alt="Projet 1" class="projets__saé" />
+        <img src="/google.png" alt="Projet 1" class="projets__google" />
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__contact" id="contact">
+        <h2 class="footer__title">CONTACTEZ-MOI</h2>
+        <form class="footer__form">
+          <input
+            type="text"
+            placeholder="Votre nom"
+            class="footer__input"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Votre email"
+            class="footer__input"
+            required
+          />
+          <textarea
+            placeholder="Votre message"
+            class="footer__textarea"
+            required
+          ></textarea>
+          <button type="submit" class="footer__button">Envoyer</button>
+        </form>
+      </div>
+      <p class="footer__copyright">© 2024 Apolline. Tous droits réservés.</p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

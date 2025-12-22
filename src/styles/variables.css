@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+:root {
+  --bg-color: #f6f1d5;
+  --text-color: #06297a;
+
+  --text-font: "Roboto", sans-serif;
+  --hero-font: "Aclonica", sans-serif;
+  --special-font: "Aboreto", cursive;
+
+  --section-padding: 6rem;
+  --title-spacing: 0.1em;
+}
