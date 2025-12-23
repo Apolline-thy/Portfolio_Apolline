@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
 
-  <body>
+  <body class="page-home">
     <main class="header">
       <img src="public/etoile.svg" alt="etoile" class="etoile" />
 
@@ -45,7 +45,7 @@
       </section>
 
       <img src="public/etoile.svg" alt="etoile" class="etoile__bottom" />
-      <img src="public/vague.svg" alt="vague" class="vague" />
+      <!--<img src="public/vague.svg" alt="vague" class="vague" />-->
     </main>
 
     <section class="propos">
@@ -70,44 +70,100 @@
 
     <section class="projets">
       <h2 class="projets__title">MES PROJETS</h2>
-
       <div class="projets__img">
-        <img src="public/google.png" alt="Projet Google" />
-        <img src="public/oeuvre.png" alt="Projet Œuvre" />
-        <img src="public/olive.png" alt="Projet Olive" />
-        <img src="public/sae.png" alt="Projet SAE" />
-        <img src="public/google.png" alt="Projet Google" />
+        <div class="project-card">
+          <div class="card-image">
+            <img src="public/google.png" alt="Projet Labifurk" />
+          </div>
+
+          <div class="card-content">
+            <h2 class="card-title">DOODLE</h2>
+
+            <div class="card-tags">
+              <span class="tag">UI & UX</span>
+              <span class="tag">Illustrator</span>
+            </div>
+
+            <p class="card-date">Juin 2025</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="card-image">
+            <img src="public/olive.png" alt="Projet Labifurk" />
+          </div>
+
+          <div class="card-content">
+            <h2 class="card-title">OLIVE OIL</h2>
+
+            <div class="card-tags">
+              <span class="tag">UI & UX</span>
+              <span class="tag">Figma</span>
+            </div>
+
+            <p class="card-date">Juin 2025</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="card-image">
+            <img src="public/saé.png" alt="Projet Labifurk" />
+          </div>
+
+          <div class="card-content">
+            <h2 class="card-title">CUPCAKE FACTORY</h2>
+
+            <div class="card-tags">
+              <span class="tag">Développement web</span>
+              <span class="tag">CSS</span>
+              <span class="tag">HTML</span>
+              <span class="tag">JS</span>
+            </div>
+
+            <p class="card-date">Janvier 2025</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="card-image">
+            <a href="oeuvre.html"
+              ><img src="public/oeuvre.png" alt="Projet Labifurk"
+            /></a>
+          </div>
+
+          <div class="card-content">
+            <h2 class="card-title">CHACUN SON OEUVRE</h2>
+
+            <div class="card-tags">
+              <span class="tag">UI & UX</span>
+              <span class="tag">Figma</span>
+            </div>
+
+            <p class="card-date">Décembre 2024</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="footer__contact" id="contact">
-        <h2 class="footer__title">CONTACTEZ-MOI</h2>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <a href="mailto:apolline.thierry@etu.unilim.fr" class="footer-email"
+            >apolline.thierry@etu.unilim.fr</a
+          >
+          <p class="footer-phone">(+33) 7 49 46 34 43</p>
+          <p class="footer-copyright">© 2025 Apolline Thierry</p>
+        </div>
 
-        <form class="footer__form">
-          <input
-            type="text"
-            placeholder="Votre nom"
-            class="footer__input"
-            required
-          />
-          <input
-            type="email"
-            placeholder="Votre email"
-            class="footer__input"
-            required
-          />
-          <textarea
-            placeholder="Votre message"
-            class="footer__textarea"
-            required
-          ></textarea>
-
-          <button type="submit" class="footer__button">Envoyer</button>
-        </form>
+        <div class="footer-right">
+          <h3 class="footer-title">CONTACTS</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="#" target="_blank">GitHub <span>↗</span></a>
+            </li>
+            <li>
+              <a href="#" target="_blank">LinkedIn <span>↗</span></a>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <p class="footer__copyright">© 2024 Apolline. Tous droits réservés.</p>
     </footer>
   </body>
 </html>

@@ -1,29 +1,42 @@
 @import "./styles/base.css";
 
+/* =========================
+   BASE
+========================= */
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--text-font);
   margin: 0;
+  overflow-x: hidden;
 }
 
-/* Header / Hero styles adjusted to match hero.png (decorations excluded) */
+/* =========================
+   HEADER / HERO (INDEX)
+========================= */
+
 .header {
   position: relative;
+  overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   background-color: var(--text-color);
-  color: var(--bg-color); /* light/cream text */
-  padding: 2.5rem 3rem;
   box-sizing: border-box;
   background-image: url("../public/fond.svg");
+  color: var(--bg-color);
 }
+
+/* =========================
+NAVBAR (COMMUNE)
+========================= */
 
 .navbar {
   width: 100%;
   display: flex;
+  padding: 2.5rem 3rem;
   align-items: center;
   gap: 2rem;
   font-size: 1rem;
@@ -38,39 +51,31 @@ body {
   list-style: none;
   display: flex;
   gap: 2rem;
-  padding-right: 10.5rem;
   margin: 0;
-  margin-left: auto; /* push links to the right */
+  margin-left: auto;
   align-items: center;
 }
 
 .navbar__liste li a,
 .navbar__logo a {
-  color: var(--bg-color);
   text-decoration: none;
 }
-.poisson {
-  position: absolute;
-  top: 275px;
-  right: 180px;
-  width: 15rem;
-  height: auto;
-  pointer-events: none;
-  cursor: pointer;
-  z-index: 10; /* placer devant le texte */
+
+/* NAVBAR – index (fond sombre) */
+.page-home .navbar__liste li a,
+.page-home .navbar__logo a {
+  color: var(--bg-color);
 }
 
-.fish {
-  position: absolute;
-  transform: scaleX(-1);
-  top: 130px;
-  left: 190px;
-  width: 13rem;
-  height: auto;
-  pointer-events: none;
-  cursor: pointer;
-  z-index: 10; /* placer devant le texte */
+/* NAVBAR – pages claires (oeuvre, etc.) */
+.page-oeuvre .navbar__liste li a,
+.page-oeuvre .navbar__logo a {
+  color: var(--text-color);
 }
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
   display: flex;
@@ -78,12 +83,11 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 5rem;
+  padding: 3rem;
 }
 
 .hero__text {
   text-align: left;
-  padding: 0;
 }
 
 .hero__title {
@@ -91,7 +95,6 @@ body {
   font-size: 8rem;
   line-height: 0.9;
   margin: 0.2rem 0 1.2rem 0;
-  letter-spacing: 0.02em;
 }
 
 .hero__subtitle {
@@ -103,26 +106,42 @@ body {
 
 .hero__buttons {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   gap: 5rem;
   padding-top: 1rem;
-  justify-content: center;
 }
 
 .hero__button {
-  background-color: var(--bg-color); /* cream */
-  color: var(--text-color); /* deep blue text */
+  background-color: var(--bg-color);
+  color: var(--text-color);
   border: none;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: 0.8rem 1.5rem;
   font-size: 1rem;
   cursor: pointer;
-  text-decoration: none;
   border-radius: 0.6rem;
   font-weight: 500;
+}
+
+/* =========================
+   DECORS
+========================= */
+
+.poisson {
+  position: absolute;
+  top: 275px;
+  right: 180px;
+  width: 15rem;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.fish {
+  position: absolute;
+  transform: scaleX(-1);
+  top: 130px;
+  left: 190px;
+  width: 13rem;
+  pointer-events: none;
+  z-index: 10;
 }
 
 .etoile {
@@ -130,7 +149,6 @@ body {
   top: -90px;
   right: -180px;
   width: 20rem;
-  height: auto;
   pointer-events: none;
 }
 
@@ -139,9 +157,8 @@ body {
   bottom: -90px;
   left: -70px;
   width: 20rem;
-  height: auto;
   pointer-events: none;
-  z-index: 6; /* place the bottom star above background decorations like .vague */
+  z-index: 6;
 }
 
 .vague {
@@ -149,40 +166,41 @@ body {
   bottom: -40px;
   left: 0;
   width: 100%;
-  height: auto;
   pointer-events: none;
-  z-index: 1; /* keep wave behind decorative elements */
+  z-index: 1;
 }
+
+/* =========================
+   SECTION PROPOS
+========================= */
+
 .propos {
-  align-items: center;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   gap: 10rem;
-  padding-top: 5rem;
-  padding-left: 5rem;
+  padding: 5rem;
 }
 
 .propos__title {
   font-size: 2rem;
-  text-align: left;
   margin-bottom: 2rem;
 }
 
 .propos__text {
-  text-align: left;
   max-width: 600px;
 }
 
+/* =========================
+   PROJETS
+========================= */
+
 .projets {
   background-color: var(--text-color);
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 5rem 0;
 }
+
 .projets__title {
   font-size: 2rem;
-  text-align: left;
-  margin-bottom: 2rem;
   padding-left: 15rem;
   color: var(--bg-color);
 }
@@ -192,34 +210,248 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 4rem;
-  max-width: 1100px; /* 👈 limite la largeur de la grille */
-  margin: 0 auto; /* 👈 centre la grille */
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .projets img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  display: block;
   border-radius: 1rem;
 }
 
-.footer {
-  background-color: var(--text-color);
-  color: var(--bg-color);
-  text-align: center;
-  padding: 2rem;
+/* =========================
+   OEUVRE
+========================= */
+
+.oeuvre {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem;
 }
 
-/* Small responsive tweaks */
+.oeuvre__img-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  padding-left: 5rem;
+}
+
+.oeuvre__text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2rem;
+}
+
+.oeuvre__img {
+  max-width: 50%;
+  border-radius: 2rem;
+}
+
+.button__oeuvre {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.button__compétences {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+/* =========================
+   FOOTER
+========================= */
+/* Style de base pour le fond */
+
+.site-footer {
+  background-color: var(
+    --text-color
+  ); /* Noir légèrement texturé comme sur l'image */
+  color: var(--bg-color);
+  padding: 60px 80px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- CÔTÉ GAUCHE --- */
+.footer-email {
+  display: block;
+  color: var(--bg-color);
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-phone {
+  font-size: 1.8rem;
+  margin: 0 0 15px 0;
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+
+/* --- CÔTÉ DROIT --- */
+.footer-right {
+  text-align: right;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a span {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+/* Container de la carte */
+.project-card {
+  width: 100%;
+  max-width: 500px; /* À ajuster selon vos besoins */
+  background-color: #030e42; /* Fond noir du bas */
+  border-radius: 20px; /* Arrondi global */
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  color: var(--bg-color);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Petit effet de survol */
+}
+
+/* Zone Image */
+.card-image {
+  width: 100%;
+  height: 300px; /* Hauteur fixe ou ratio */
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Pour que l'image remplisse l'espace sans se déformer */
+  display: block;
+  border-radius: 0;
+}
+
+/* Zone Texte */
+.card-content {
+  padding: 25px;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+  letter-spacing: 1px;
+}
+
+/* Tags / Badges */
+.card-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tag {
+  border: 1px solid var(--bg-color);
+  padding: 6px 15px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  color: var(--bg-color);
+  font-weight: 400;
+}
+
+/* Date */
+.card-date {
+  font-size: 0.9rem;
+
+  margin: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .footer-right {
+    text-align: left;
+    margin-top: 40px;
+  }
+
+  .footer-email {
+    font-size: 1.4rem;
+  }
+}
+/* Footer */
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 720px) {
   .navbar {
     padding: 0.5rem 1rem;
   }
+
   .navbar__liste {
     gap: 1rem;
   }
+
   .hero__title {
     font-size: clamp(3rem, 18vw, 6rem);
+  }
+
+  .oeuvre {
+    flex-direction: column;
   }
 }
