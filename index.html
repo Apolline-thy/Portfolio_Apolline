@@ -23,9 +23,9 @@
 
         <ul class="navbar__liste">
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="about.html">À propos</a></li>
-          <li><a href="projects.html">Mes projets</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#propos">À propos</a></li>
+          <li><a href="#projets">Mes projets</a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
       </nav>
 
@@ -39,16 +39,17 @@
         </div>
 
         <div class="hero__buttons">
-          <button class="hero__button">Mes projets</button>
-          <button class="hero__button">À propos</button>
+          <a href="#projets"
+            ><button class="hero__button">Mes projets</button></a
+          >
+          <a href="#propos"><button class="hero__button">À propos</button></a>
         </div>
       </section>
 
       <img src="public/etoile.svg" alt="etoile" class="etoile__bottom" />
-      <!-- <img src="public/vague.svg" alt="vague" class="vague" /> -->
     </main>
 
-    <section class="propos">
+    <section class="propos" id="propos">
       <div class="propos__text">
         <h2 class="propos__title">BONJOUR !</h2>
         <p class="propos__desc">
@@ -68,12 +69,14 @@
       />
     </section>
 
-    <section class="projets">
+    <section class="projets" id="projets">
       <h2 class="projets__title">MES PROJETS</h2>
       <div class="projets__img">
         <div class="project-card">
           <div class="card-image">
-            <img src="public/google.png" alt="Projet Labifurk" />
+            <a href="doodle.html"
+              ><img src="public/google.png" alt="Projet Doodle Google"
+            /></a>
           </div>
 
           <div class="card-content">
@@ -107,7 +110,9 @@
         </div>
         <div class="project-card">
           <div class="card-image">
-            <img src="public/saé.png" alt="Projet Labifurk" />
+            <a href="sae.html"
+              ><img src="public/saé.png" alt="Projet Labifurk"
+            /></a>
           </div>
 
           <div class="card-content">
@@ -144,7 +149,8 @@
       </div>
     </section>
 
-    <footer class="site-footer">
+    <footer class="site-footer" id="footer">
+      <img src="public/vague.svg" alt="vague" class="vague" />
       <div class="footer-container">
         <div class="footer-left">
           <a href="mailto:apolline.thierry@etu.unilim.fr" class="footer-email"
@@ -158,10 +164,16 @@
           <h3 class="footer-title">CONTACTS</h3>
           <ul class="footer-links">
             <li>
-              <a href="#" target="_blank">GitHub <span>↗</span></a>
+              <a href="https://github.com/Apolline-thy" target="_blank"
+                >GitHub <span>↗</span></a
+              >
             </li>
             <li>
-              <a href="#" target="_blank">LinkedIn <span>↗</span></a>
+              <a
+                href="https://www.linkedin.com/in/apolline-thierry-88811b332/"
+                target="_blank"
+                >LinkedIn <span>↗</span></a
+              >
             </li>
           </ul>
         </div>
