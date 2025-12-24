@@ -30,7 +30,7 @@ body {
 }
 
 /* =========================
-NAVBAR (COMMUNE)
+   NAVBAR
 ========================= */
 
 .navbar {
@@ -62,13 +62,13 @@ NAVBAR (COMMUNE)
   text-decoration: none;
 }
 
-/* NAVBAR – index (fond sombre) */
+/* Navbar – index */
 .page-home .navbar__liste li a,
 .page-home .navbar__logo a {
   color: var(--bg-color);
 }
 
-/* NAVBAR – pages claires (oeuvre, etc.) */
+/* Navbar – pages claires */
 .page-oeuvre .navbar__liste li a,
 .page-oeuvre .navbar__logo a {
   color: var(--text-color);
@@ -168,15 +168,23 @@ NAVBAR (COMMUNE)
   z-index: 6;
 }
 
+.etoile__bleue {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 10rem;
+  pointer-events: none;
+}
+
 /* =========================
-SECTION PROPOS
+   SECTION PROPOS
 ========================= */
 
 .propos {
   display: flex;
   justify-content: center;
   gap: 10rem;
-  padding-left: 9rem;
+  padding: 3rem;
   margin-top: 5rem;
 }
 
@@ -190,20 +198,22 @@ SECTION PROPOS
 }
 
 /* =========================
-PROJETS
+   PROJETS
 ========================= */
 
 .projets {
   position: relative;
   background-color: var(--text-color);
-  padding: 5rem 0;
+  padding-top: 0.5rem;
   margin-bottom: 10rem;
 }
 
 .projets__title {
+  position: relative;
   font-size: 2rem;
   padding-left: 17rem;
   color: var(--bg-color);
+  z-index: 10;
 }
 
 .projets__img {
@@ -215,45 +225,48 @@ PROJETS
   margin: 0 auto;
 }
 
-.projets img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 1rem;
-}
-
 /* =========================
-OEUVRE
+   OEUVRE
 ========================= */
 
-.oeuvre {
+.projet {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   gap: 2rem;
-  padding: 5rem;
+  padding-top: 2rem;
 }
 
-.oeuvre__img-container {
+.projet__img-container {
   display: flex;
-  flex-direction: row;
   gap: 5rem;
   padding-left: 5rem;
 }
 
-.oeuvre__text {
+.projets img:not(.vague) {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.projet__text {
   display: flex;
   flex-direction: column;
   text-align: left;
   gap: 2rem;
+  padding-right: 5rem;
 }
 
-.oeuvre__img {
-  max-width: 50%;
-  border-radius: 2rem;
+.projet__buttons {
+  display: flex;
+  gap: 1rem;
 }
 
-.button__oeuvre {
+/* =========================
+   BOUTONS
+========================= */
+
+.button__projet {
   background-color: var(--text-color);
   color: var(--bg-color);
   border: none;
@@ -265,7 +278,7 @@ OEUVRE
   width: fit-content;
 }
 
-.button__oeuvre:hover {
+.button__projet:hover {
   background-color: var(--bg-color);
   color: var(--text-color);
   border: 1px solid var(--text-color);
@@ -283,26 +296,47 @@ OEUVRE
 }
 
 /* =========================
-FOOTER
+   ILLUSTRATIONS FULL WIDTH
 ========================= */
-/* Style de base pour le fond */
 
-.vague {
-  transform: scaleX(-1);
-  position: absolute;
-  bottom: -40px;
-  left: 0;
+.projet__illustration-wrapper {
   width: 100%;
-  pointer-events: none;
-  z-index: 2;
+  background-color: var(--text-color);
 }
+
+.projet__illustration-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.projet__illustration {
+  width: 350px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 .site-footer {
   position: relative;
-  background-color: var(
-    --text-color
-  ); /* Noir légèrement texturé comme sur l'image */
+  background-color: var(--text-color);
   color: var(--bg-color);
   padding: 60px 80px;
+  margin-top: 5rem;
+}
+.vague {
+  position: absolute;
+  top: -50px; /* ajuste selon ton SVG */
+  left: 0px;
+  transform: scaleY(-1);
+  width: 100%; /* taille finale */
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .footer-container {
@@ -313,7 +347,6 @@ FOOTER
   margin: 0 auto;
 }
 
-/* --- CÔTÉ GAUCHE --- */
 .footer-email {
   display: block;
   color: var(--bg-color);
@@ -333,7 +366,6 @@ FOOTER
   margin-top: 20px;
 }
 
-/* --- CÔTÉ DROIT --- */
 .footer-right {
   text-align: right;
 }
@@ -366,12 +398,15 @@ FOOTER
   margin-left: 5px;
 }
 
-/* Container de la carte */
+/* =========================
+   CARDS
+========================= */
+
 .project-card {
   width: 100%;
-  max-width: 500px; /* À ajuster selon vos besoins */
-  background-color: #030e42; /* Fond noir du bas */
-  border-radius: 20px; /* Arrondi global */
+  max-width: 500px;
+  background-color: #030e42;
+  border-radius: 20px;
   overflow: hidden;
   font-family: "Inter", sans-serif;
   color: var(--bg-color);
@@ -379,24 +414,21 @@ FOOTER
 }
 
 .project-card:hover {
-  transform: translateY(-5px); /* Petit effet de survol */
+  transform: translateY(-5px);
 }
 
-/* Zone Image */
 .card-image {
   width: 100%;
-  height: 300px; /* Hauteur fixe ou ratio */
+  height: 300px;
 }
 
 .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Pour que l'image remplisse l'espace sans se déformer */
+  object-fit: cover;
   display: block;
-  border-radius: 0;
 }
 
-/* Zone Texte */
 .card-content {
   padding: 25px;
 }
@@ -408,7 +440,6 @@ FOOTER
   letter-spacing: 1px;
 }
 
-/* Tags / Badges */
 .card-tags {
   display: flex;
   gap: 10px;
@@ -422,54 +453,17 @@ FOOTER
   border-radius: 25px;
   font-size: 0.85rem;
   color: var(--bg-color);
-  font-weight: 400;
 }
 
-/* Date */
 .card-date {
   font-size: 0.9rem;
-
   margin: 0;
 }
 
-.oeuvre {
-  display: flex;
-}
+/* =========================
+   RESPONSIVE
+========================= */
 
-.oeuvre__buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.etoile__bleue {
-  position: absolute;
-  top: 0;
-  right: -10px;
-  width: 10rem;
-  pointer-events: none;
-}
-.oeuvre__illustration {
-  width: 50%;
-  display: flex;
-  gap: 2rem;
-
-  padding: 2rem;
-  background-color: #0b2e78; /* bleu foncé comme sur ton cadre */
-  box-sizing: border-box;
-}
-
-.doodle1 {
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-}
-
-.doodle2 {
-  width: 100%;
-  border-radius: 1rem;
-}
-
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -485,11 +479,6 @@ FOOTER
     font-size: 1.4rem;
   }
 }
-/* Footer */
-
-/* =========================
-   RESPONSIVE
-========================= */
 
 @media (max-width: 720px) {
   .navbar {
