@@ -246,7 +246,6 @@ body {
 .projet__img {
   width: 40%;
   border-radius: 2rem;
-  object-fit: cover;
 }
 
 .projet__text {
