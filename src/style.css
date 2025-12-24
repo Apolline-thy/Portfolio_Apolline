@@ -243,9 +243,9 @@ body {
   padding-left: 5rem;
 }
 
-.projets img:not(.vague) {
-  width: 100%;
-  aspect-ratio: 4 / 3;
+.projet__img {
+  width: 40%;
+  border-radius: 2rem;
   object-fit: cover;
 }
 
