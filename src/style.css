@@ -185,7 +185,7 @@ body {
   justify-content: center;
   gap: 10rem;
   padding: 3rem;
-  margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 
 .propos__title {
@@ -225,6 +225,31 @@ body {
   margin: 0 auto;
 }
 
+.project-card {
+  position: relative;
+  z-index: 10;
+}
+
+.etoile__project {
+  position: absolute;
+  transform: scaleX(-1) rotate(20deg);
+  top: 50px;
+  right: 175px;
+  width: 20rem;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.etoile__sae {
+  position: absolute;
+  transform: scaleX(-1) rotate(50deg);
+  bottom: -60px;
+  left: 110px;
+  width: 18rem;
+  pointer-events: none;
+  z-index: 5;
+}
+
 /* =========================
    OEUVRE
 ========================= */
@@ -253,7 +278,7 @@ body {
   flex-direction: column;
   text-align: left;
   gap: 2rem;
-  padding-right: 5rem;
+  padding-right: 20rem;
 }
 
 .projet__buttons {
@@ -313,7 +338,7 @@ body {
 }
 
 .projet__illustration {
-  width: 350px;
+  width: 550px;
 }
 
 /* =========================
@@ -332,6 +357,16 @@ body {
   top: -50px; /* ajuste selon ton SVG */
   left: 0px;
   transform: scaleY(-1);
+  width: 100%; /* taille finale */
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vague__bottom {
+  position: absolute;
+  bottom: -80px; /* ajuste selon ton SVG */
+  left: 0px;
   width: 100%; /* taille finale */
   height: auto;
   pointer-events: none;
