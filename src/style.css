@@ -294,8 +294,7 @@ body {
 .projet__img-container {
   display: flex;
   gap: 5rem;
-  padding-left: 5rem;
-  margin-bottom: 5rem;
+  padding: 2rem;
 }
 
 .projet__img {
