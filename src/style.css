@@ -56,6 +56,17 @@ body {
   color: var(--text-color);
 }
 
+.page-oeuvre .site-footer {
+  position: relative;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.page-oeuvre .footer-email {
+  position: relative;
+  color: var(--bg-color);
+}
+
 /* =========================
    HEADER / HERO
 ========================= */
@@ -147,6 +158,12 @@ body {
   border-radius: 0.6rem;
   font-weight: 500;
 }
+
+.button__projet:hover {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
 /* =========================
    DECORS
 ========================= */
@@ -211,6 +228,16 @@ body {
   width: 100%;
   pointer-events: none;
   z-index: 2;
+}
+
+.vague__footer {
+  position: absolute;
+  transform: scaleY(-1);
+  top: -80px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 /* =========================
    SECTION PROPOS
@@ -295,6 +322,7 @@ body {
   display: flex;
   gap: 5rem;
   padding: 2rem;
+  margin-bottom: 5rem;
 }
 
 .projet__img {
@@ -348,6 +376,7 @@ body {
   color: var(--text-color);
   padding-bottom: 2rem;
   margin-top: 5rem;
+  z-index: 1;
 }
 
 .vague,
@@ -377,10 +406,12 @@ body {
 }
 
 .footer-email {
+  position: relative;
   color: var(--text-color);
   font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
+  z-index: 2;
 }
 
 .footer-phone {
