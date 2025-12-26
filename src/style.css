@@ -814,10 +814,30 @@ img {
   }
 
   .hero__title {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .oeuvre {
+    flex-direction: column;
+  }
+
+  .hero__buttons {
+    flex-direction: row;
+  }
+
+  .hero__button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.6rem;
+    font-weight: 500;
+  }
+
+  .projet__illustration-container {
+    display: flex;
     flex-direction: column;
   }
 }
