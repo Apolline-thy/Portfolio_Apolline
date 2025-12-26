@@ -515,7 +515,9 @@ body {
 ========================= */
 .burger-toggle {
   display: none;
-} /* Icône burger */
+}
+
+/* Icône burger */
 .burger {
   display: none;
   flex-direction: column;
@@ -526,9 +528,11 @@ body {
 .burger span {
   width: 28px;
   height: 3px;
-  background-color: var(--text-color);
+  background-color: var(--bg-color);
   transition: 0.3s ease;
-} /* Animation burger → croix */
+}
+
+/* Animation burger → croix */
 .burger-toggle:checked + .burger span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
@@ -559,8 +563,8 @@ img {
     top: 0;
     right: -100%;
     height: 100vh;
-    width: 70%;
-    background-color: var(--bg-color);
+    width: 50%;
+    background-color: var(--text-color);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -569,10 +573,14 @@ img {
     z-index: 50;
   } /* Quand la checkbox est cochée → menu visible */
 
+  .navbar__logo a {
+    display: none;
+  }
   .burger-toggle:checked ~ .navbar__liste {
     right: 0;
   }
   .hero {
+    position: relative;
     padding: 1.5rem;
   }
 
@@ -583,7 +591,7 @@ img {
 
   .hero__subtitle {
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
   }
 
   .hero__buttons {
@@ -644,22 +652,37 @@ img {
   }
 
   /* DECORS */
-  .poisson,
-  .fish,
+
   .etoile,
   .etoile__bottom,
   .etoile__bleue,
   .etoile__project,
   .etoile__sae,
+  .vague,
+  .vague__footer,
+  .vague__bottom,
   .vague__textile,
   .vague__textile-bottom {
     display: none;
+  }
+
+  .poisson {
+    width: 8rem;
+    top: 30px;
+    right: 50px;
+  }
+
+  .fish {
+    width: 10rem;
+    top: 400px;
+    left: 50px;
   }
 }
 
 @media (max-width: 720px) {
   .navbar {
     padding: 0.5rem 1rem;
+    justify-content: end;
   }
 
   .navbar__liste {
@@ -667,7 +690,7 @@ img {
   }
 
   .hero__title {
-    font-size: clamp(3rem, 18vw, 6rem);
+    font-size: 4rem;
   }
 
   .oeuvre {
