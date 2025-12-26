@@ -239,6 +239,10 @@ body {
   pointer-events: none;
   z-index: 0;
 }
+
+.propos__couteau:hover {
+  rotate: 2deg;
+}
 /* =========================
    SECTION PROPOS
 ========================= */
