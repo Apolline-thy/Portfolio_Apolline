@@ -191,13 +191,13 @@ img {
 ========================= */
 .projets {
   background-color: var(--text-color);
-  padding-top: 0.5rem;
+
+  padding-bottom: 3rem;
 }
 
 .projets__img {
   display: flex;
   flex-direction: column;
-  grid-template-columns: 1fr;
   padding: 1rem;
   gap: 2rem;
 }
@@ -206,6 +206,7 @@ img {
   font-size: 2rem;
   color: var(--bg-color);
   text-align: center;
+  padding: 2rem;
 }
 
 /* =========================
@@ -213,7 +214,6 @@ img {
 ========================= */
 .projet {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   gap: 5rem;
   padding-top: 2rem;
@@ -221,6 +221,7 @@ img {
 
 .projet__img-container {
   display: flex;
+  flex-direction: column;
   gap: 5rem;
   padding: 2rem;
   margin-bottom: 5rem;
@@ -228,6 +229,7 @@ img {
 
 .projet__img {
   border-radius: 2rem;
+  width: 100%;
 }
 
 .projet__text {
@@ -392,7 +394,7 @@ CARDS
   position: absolute;
   width: 9rem;
   top: -50px;
-  right: 20px;
+  right: 60px;
 }
 
 .fish {
