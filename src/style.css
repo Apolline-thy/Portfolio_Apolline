@@ -114,15 +114,14 @@ img {
 .hero {
   position: relative;
   display: flex;
+  padding-right: 3rem;
   flex-direction: column;
-  text-align: center;
-
+  justify-content: center;
   align-self: center;
 }
 
 .hero__text {
   flex-direction: column;
-  text-align: left;
 }
 
 .hero__title {
