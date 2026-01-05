@@ -242,14 +242,13 @@ img {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 5rem;
   padding-top: 2rem;
 }
 
 .projet__img-container {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 1rem;
   padding: 2rem;
   margin-bottom: 5rem;
 }
@@ -262,7 +261,7 @@ img {
 .projet__text {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+
   text-align: left;
   max-width: 520px;
 }
@@ -270,6 +269,7 @@ img {
 .projet__buttons {
   display: flex;
   gap: 1rem;
+  margin: 1.5rem 0 1.5rem 0;
 }
 
 /* =========================
@@ -349,7 +349,7 @@ CARDS
   text-align: left;
   padding-left: 2rem;
   padding-top: 2rem;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .footer-right {
