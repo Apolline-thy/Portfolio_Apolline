@@ -749,13 +749,16 @@ CARDS
 /* GRAND ÉCRAN PC FIXE (tour) */
 @media (min-width: 120rem) {
   .projets__title {
-    padding-left: 17rem;
+    text-align: left;
+    padding-left: 20rem;
+    margin: 0;
   }
+
   .hero__buttons {
     flex-direction: row;
   }
   .hero__title {
-    font-size: 3rem;
+    font-size: 12rem;
   }
   .oeuvre {
     flex-direction: row;
