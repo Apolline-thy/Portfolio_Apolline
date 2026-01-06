@@ -453,98 +453,25 @@ CARDS
   .burger {
     display: none;
   }
-  .page-home .navbar__liste li a,
-  .page-home .navbar__logo a {
-    color: var(--bg-color);
-  }
-
-  .page-oeuvre .navbar__liste li a,
-  .page-oeuvre .navbar__logo a {
-    color: var(--text-color);
-  }
 
   .header {
     position: relative;
     overflow-x: hidden;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    background-color: var(--text-color);
-    background-image: url("../public/fond.svg");
-    color: var(--bg-color);
-    box-sizing: border-box;
+    padding-bottom: 18rem;
   }
 
   .hero {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 3rem;
+    padding-top: 5rem;
   }
 
   .hero__text {
     text-align: left;
   }
-
-  .navbar {
-    width: 100%;
-    display: flex;
-    padding: 2.5rem 3rem;
-    align-items: center;
-    gap: 2rem;
-    font-size: 1rem;
-  }
-
-  .navbar__liste {
-    position: fixed;
-    inset: 0 0 0 auto;
-    width: 60%;
-    height: 100vh;
-    background-color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    transform: translateX(100%);
-    transition: 0.4s ease;
-  }
-
-  .navbar__liste li a,
-  .navbar__logo a {
-    text-decoration: none;
-  }
-
-  .projets__title {
-    padding-left: 17rem;
-  }
-  .hero__buttons {
-    flex-direction: row;
-  }
-  .hero__title {
-    font-size: 3rem;
-  }
-  .oeuvre {
-    flex-direction: row;
-  }
-  .projet__illustration-container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .propos__text {
-    text-align: left;
-  }
-
-  .footer__container {
-    display: flex;
-    flex-direction: row;
-  }
-}
-@media (min-width: 80rem) {
-  /* 1024px */
 
   .hero__title {
     font-family: var(--hero-font);
@@ -558,6 +485,65 @@ CARDS
     font-size: 3rem;
     padding-bottom: 1rem;
   }
+  .page-home .navbar__liste li a,
+  .page-home .navbar__logo a {
+    color: var(--bg-color);
+  }
+
+  .page-oeuvre .navbar__liste li a,
+  .page-oeuvre .navbar__logo a {
+    color: var(--text-color);
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    position: relative;
+    z-index: 100;
+  }
+  .navbar__logo a {
+    display: block;
+    font-size: 1rem;
+    font-family: var(--special-font);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .navbar__liste {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    position: static;
+    right: auto;
+    top: auto;
+    height: auto;
+    width: auto;
+    background: none;
+    padding: 0;
+  }
+  .navbar__liste a {
+    display: block;
+    font-size: 1rem;
+    color: var(--bg-color);
+    text-decoration: none;
+  }
+
+  .hero__button {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .hero__button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: 1px solid var(--bg-color);
+  }
+
+  .footer__container {
+    display: flex;
+    flex-direction: row;
+  }
 
   .poisson,
   .fish,
@@ -570,14 +556,18 @@ CARDS
   }
 
   .poisson {
-    top: 275px;
-    right: 180px;
+    top: 175px;
+    right: -150px;
     width: 15rem;
   }
 
+  .poisson:hover {
+    rotate: (2deg);
+  }
+
   .fish {
-    top: 130px;
-    left: 190px;
+    top: 60px;
+    left: -180px;
     width: 13rem;
     transform: scaleX(-1);
   }
@@ -674,6 +664,33 @@ CARDS
   .propos {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    padding-left: 2rem;
+    margin: 3rem;
+    gap: 5rem;
+  }
+
+  .propos__text {
+    width: 40%;
+  }
+
+  .propos__title {
+    text-align: left;
+    padding: 0;
+  }
+
+  .propos__text-right {
+    text-align: left;
+  }
+
+  .projets {
+    padding-top: 3rem;
+  }
+
+  .projets__title {
+    text-align: left;
+    padding-left: 14rem;
+    margin: 0;
   }
 
   .projet__img-container {
@@ -685,9 +702,39 @@ CARDS
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    padding: 4rem;
+    padding-bottom: 4rem;
     max-width: 1100px;
     margin: 0 auto;
+  }
+
+  .projet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projet__img {
+    width: 40%;
+  }
+
+  .button__projet:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+  }
+
+  .projet__illustration-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .projet__illustration {
+    width: 45%;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: row;
   }
 }
 
