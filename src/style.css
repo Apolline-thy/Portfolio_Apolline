@@ -494,6 +494,7 @@ CARDS
   .page-oeuvre .navbar__logo a {
     color: var(--text-color);
   }
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -693,11 +694,6 @@ CARDS
     margin: 0;
   }
 
-  .projet__img-container {
-    display: flex;
-    flex-direction: row;
-  }
-
   .projets__img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -707,27 +703,13 @@ CARDS
     margin: 0 auto;
   }
 
-  .project-card:hover {
-    transform: scale(1.05);
-  }
-
   .projet {
     display: flex;
     flex-direction: column;
   }
-
-  .projet__img {
-    width: 40%;
-  }
-
-  .button__projet:hover {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    border: 1px solid var(--text-color);
-  }
-
-  .projet__text {
-    width: 50%;
+  .projet__img-container {
+    display: flex;
+    flex-direction: row;
   }
 
   .projet__illustration-container {
@@ -735,9 +717,24 @@ CARDS
     flex-direction: row;
     justify-content: center;
   }
+  .project-card:hover {
+    transform: scale(1.05);
+  }
 
+  .projet__img {
+    width: 40%;
+  }
+
+  .projet__text {
+    width: 50%;
+  }
   .projet__illustration {
     width: 45%;
+  }
+  .button__projet:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
   }
 
   .footer-container {
@@ -762,6 +759,12 @@ CARDS
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem;
   }
 
   .projet__text {
