@@ -777,4 +777,17 @@ CARDS
     width: 50%;
     align-self: center;
   }
+
+  .etoile {
+    top: -90px;
+    right: -180px;
+    width: 25rem;
+  }
+
+  .etoile__bottom {
+    bottom: -90px;
+    left: -70px;
+    width: 25rem;
+    z-index: 6;
+  }
 }
