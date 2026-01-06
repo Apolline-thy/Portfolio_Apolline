@@ -754,19 +754,10 @@ CARDS
     margin: 0;
   }
 
-  .hero__buttons {
-    flex-direction: row;
-  }
   .hero__title {
     font-size: 11rem;
   }
-  .oeuvre {
-    flex-direction: row;
-  }
-  .projet__illustration-container {
-    display: flex;
-    flex-direction: row;
-  }
+
   .projet__img-container {
     display: flex;
     flex-direction: row;
@@ -788,5 +779,9 @@ CARDS
     left: -180px;
     width: 17rem;
     transform: scaleX(-1);
+  }
+
+  .header {
+    padding-bottom: 22rem;
   }
 }
