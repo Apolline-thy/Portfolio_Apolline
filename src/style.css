@@ -750,7 +750,7 @@ CARDS
 @media (min-width: 120rem) {
   .projets__title {
     text-align: left;
-    padding-left: 20rem;
+    padding-left: 26rem;
     margin: 0;
   }
 
@@ -758,7 +758,7 @@ CARDS
     flex-direction: row;
   }
   .hero__title {
-    font-size: 12rem;
+    font-size: 11rem;
   }
   .oeuvre {
     flex-direction: row;
@@ -766,5 +766,10 @@ CARDS
   .projet__illustration-container {
     display: flex;
     flex-direction: row;
+  }
+  .projet__img-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 }
