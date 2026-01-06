@@ -707,6 +707,10 @@ CARDS
     margin: 0 auto;
   }
 
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+
   .projet {
     display: flex;
     flex-direction: column;
@@ -720,6 +724,10 @@ CARDS
     background-color: var(--bg-color);
     color: var(--text-color);
     border: 1px solid var(--text-color);
+  }
+
+  .projet__text {
+    width: 50%;
   }
 
   .projet__illustration-container {
