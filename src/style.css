@@ -778,16 +778,15 @@ CARDS
     align-self: center;
   }
 
-  .etoile {
-    top: -90px;
-    right: -180px;
-    width: 25rem;
+  .poisson {
+    top: 175px;
+    right: -150px;
+    width: 17rem;
   }
-
-  .etoile__bottom {
-    bottom: -90px;
-    left: -70px;
-    width: 25rem;
-    z-index: 6;
+  .fish {
+    top: 60px;
+    left: -180px;
+    width: 17rem;
+    transform: scaleX(-1);
   }
 }
