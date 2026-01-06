@@ -772,4 +772,9 @@ CARDS
     flex-direction: row;
     align-items: center;
   }
+
+  .projet__text {
+    width: 50%;
+    align-self: center;
+  }
 }
