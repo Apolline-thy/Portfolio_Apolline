@@ -15,6 +15,7 @@ const items = document.querySelectorAll(".carousel__item");
 const container = document.querySelector(".carousel__container");
 const prevBtn = document.querySelector(".carousel__btn--prev");
 const nextBtn = document.querySelector(".carousel__btn--next");
+const carousel = document.querySelector(".carousel");
 
 const ITEM_WIDTH = 280; // largeur de l'image
 const GAP = 24; // gap entre les images (1.5rem = 24px)
@@ -27,13 +28,19 @@ function updateCarousel() {
     }
   });
 
-  // Translate le container pour centrer l'image active
-  const offset = -(currentSlide * (ITEM_WIDTH + GAP));
-  gsap.to(container, {
-    x: offset,
-    duration: 0.5,
-    ease: "power2.out",
-  });
+  // Translate le container pour centrer l'image active au milieu du carrousel
+  const carouselWidth = carousel.clientWidth;
+
+  // Vérifier que la largeur est valide
+  if (carouselWidth > 0) {
+    const centerOffset = carouselWidth / 2 - ITEM_WIDTH / 2;
+    const offset = -(currentSlide * (ITEM_WIDTH + GAP)) + centerOffset;
+    gsap.to(container, {
+      x: offset,
+      duration: 0.5,
+      ease: "power2.out",
+    });
+  }
 }
 
 if (nextBtn && prevBtn && items.length > 0) {
@@ -47,5 +54,7 @@ if (nextBtn && prevBtn && items.length > 0) {
     updateCarousel();
   });
 
-  updateCarousel();
+  // Initialiser le carrousel au chargement
+  window.addEventListener("load", updateCarousel);
+  setTimeout(updateCarousel, 0);
 }
