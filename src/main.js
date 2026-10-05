@@ -17,7 +17,7 @@ const prevBtn = document.querySelector(".carousel__btn--prev");
 const nextBtn = document.querySelector(".carousel__btn--next");
 const carousel = document.querySelector(".carousel");
 
-const ITEM_WIDTH = 280; // largeur de l'image
+const ITEM_WIDTH = 300; // largeur de l'image
 const GAP = 24; // gap entre les images (1.5rem = 24px)
 
 function updateCarousel() {
